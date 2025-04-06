@@ -1,0 +1,20 @@
+{
+	"name": "Gruvbox Theme",
+	"theme": {
+		"colors": {
+			"bookmark_text": [ 251, 241, 201 ],
+			"frame": [ 29, 32, 33 ],
+			"frame_inactive": [ 29, 32, 33 ],
+			"frame_incognito": [ 251, 241, 201 ],
+			"frame_incognito_inactive": [ 251, 241, 201 ],
+			"tab_background_text": [ 251, 241, 201 ],
+			"tab_text": [ 251, 241, 201 ],
+			"toolbar": [ 60, 56, 55 ],
+			"toolbar_button_icon":  [ 125, 174, 163 ],
+			"ntp_text": [	142, 192, 124 ],
+			"button_icon": [ 234, 105, 98 ]
+		}
+	},
+	"version": "1.1",
+	"manifest_version": 2
+}
