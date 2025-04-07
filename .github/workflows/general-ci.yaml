@@ -1,5 +1,8 @@
-# To automatically trigger the workflow
-on: [tag]
+# To automatically trigger the workflow on tagging
+on:
+  push:
+    tags:        
+      - '*'
 
 uses: Klemensas/chrome-extension-upload-action@1.4.1
 with:
