@@ -8,6 +8,7 @@ jobs:
   build:
     name: build & publish chrome extension
     runs-on: debian-latest
+    when: manual
     steps:
       - uses: vimtor/action-zip@v1.2
         with:
