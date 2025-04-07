@@ -10,11 +10,19 @@
 			"tab_background_text": [ 251, 241, 201 ],
 			"tab_text": [ 251, 241, 201 ],
 			"toolbar": [ 60, 56, 55 ],
-			"toolbar_button_icon":  [ 125, 174, 163 ],
+			"toolbar_text": [ 251, 241, 201 ],
+			"toolbar_field": [ 29, 32, 33 ],
+			"toolbar_field_text": [ 251, 241, 201 ],
+			"toolbar_button_icon": [ 125, 174, 163 ],
+			"tab_line": [ 125, 174, 163 ],
+			"popup": [ 29, 32, 33 ],
+			"popup_text": [ 251, 241, 201 ],
 			"ntp_text": [	142, 192, 124 ],
-			"button_icon": [ 234, 105, 98 ]
+			"button_icon": [ 234, 105, 98 ],
+			"tab_loading": [ 125, 174, 163 ],
+			"icons": [ 125, 174, 163 ]
 		}
 	},
-	"version": "1.1",
+	"version": "1.2",
 	"manifest_version": 2
 }
