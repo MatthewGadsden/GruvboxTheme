@@ -1,3 +1,6 @@
+# To automatically trigger the workflow
+on: [tag]
+
 uses: Klemensas/chrome-extension-upload-action@1.4.1
 with:
   refresh-token: 'xxxxxxxxxxxxxxxxxxxxxx'
