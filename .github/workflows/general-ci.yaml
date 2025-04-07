@@ -1,14 +1,23 @@
 # To automatically trigger the workflow on tagging
 on:
   push:
-    tags:        
+    tags:
       - '*'
 
-uses: Klemensas/chrome-extension-upload-action@1.4.1
-with:
-  refresh-token: 'xxxxxxxxxxxxxxxxxxxxxx'
-  client-id: 'xxxxxxxxxxxxx'
-  client-secret: ${{ secrets.CHROME_EXTENSION_SECRET }}
-  file-name: './extension.zip'
-  app-id: 'pligoajaaggbghgopjdmkfbnaodknplm'
-  publish: true
+jobs:
+  build:
+    name: build & publish chrome extension
+    runs-on: debian-latest
+    steps:
+      - uses: vimtor/action-zip@v1.2
+        with:
+          files: manifest.json
+          dest: result.zip
+      - uses: Klemensas/chrome-extension-upload-action@1.4.1
+        with:
+          refresh-token: 'xxxxxxxxxxxxxxxxxxxxxx'
+          client-id: 'xxxxxxxxxxxxx'
+          client-secret: ${{ secrets.CHROME_EXTENSION_SECRET }}
+          file-name: './result.zip'
+          app-id: 'pligoajaaggbghgopjdmkfbnaodknplm'
+          publish: true
