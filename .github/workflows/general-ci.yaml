@@ -13,7 +13,7 @@ jobs:
         with:
           files: manifest.json
           dest: result.zip
-      - uses: Klemensas/chrome-extension-upload-action@1.4.1
+      - uses: Passiverecords/chrome-extension-upload-action@1.4.1
         with:
           refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
           client-id: ${{ secrets.CHROME_CLIENT_ID }}
