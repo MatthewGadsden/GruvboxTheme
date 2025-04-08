@@ -15,8 +15,8 @@ jobs:
           dest: result.zip
       - uses: Klemensas/chrome-extension-upload-action@1.4.1
         with:
-          refresh-token: 'xxxxxxxxxxxxxxxxxxxxxx'
-          client-id: 'xxxxxxxxxxxxx'
+          refresh-token: ${{ secrets.CHROME_REFRESH_TOKEN }}
+          client-id: ${{ secrets.CHROME_CLIENT_ID }}
           client-secret: ${{ secrets.CHROME_EXTENSION_SECRET }}
           file-name: './result.zip'
           app-id: 'pligoajaaggbghgopjdmkfbnaodknplm'
