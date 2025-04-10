@@ -12,4 +12,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Validate YAML file
-        run: yamllint ./.github/general-ci.yaml
+        run: yamllint .github/general-ci.yaml
