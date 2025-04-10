@@ -5,9 +5,10 @@ on:
       - '*'
 
 jobs:
-  build:
+  build-publish-chrome:
     name: build & publish chrome extension
     runs-on: ubuntu-latest
+    when: manual
     steps:
       - uses: actions/checkout@v4
       - uses: vimtor/action-zip@v1.2
@@ -22,3 +23,27 @@ jobs:
           file-name: 'result.zip'
           app-id: 'pligoajaaggbghgopjdmkfbnaodknplm'
           publish: true
+      - uses: wdzeng/firefox-addon@v1
+        with:
+          addon-guid: 099c6511-ce99-4245-9912-08cc23f805d9
+          xpi-path: result.zip
+          self-hosted: false
+          jwt-issuer: ${{ secrets.FIREFOX_JWT_ISSUER }}
+          jwt-secret: ${{ secrets.FIREFOX_JWT_SECRET }}
+  build-publish-firefox:
+    name: build & publish firefox extension
+    runs-on: ubuntu-latest
+    when: manual
+    steps:
+      - uses: actions/checkout@v4
+      - uses: vimtor/action-zip@v1.2
+        with:
+          files: manifest.json
+          dest: result.zip
+      - uses: wdzeng/firefox-addon@v1
+        with:
+          addon-guid: 099c6511-ce99-4245-9912-08cc23f805d9
+          xpi-path: result.zip
+          self-hosted: false
+          jwt-issuer: ${{ secrets.FIREFOX_JWT_ISSUER }}
+          jwt-secret: ${{ secrets.FIREFOX_JWT_SECRET }}
