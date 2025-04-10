@@ -22,13 +22,6 @@ jobs:
           file-name: 'result.zip'
           app-id: 'pligoajaaggbghgopjdmkfbnaodknplm'
           publish: true
-      - uses: wdzeng/firefox-addon@v1
-        with:
-          addon-guid: 099c6511-ce99-4245-9912-08cc23f805d9
-          xpi-path: result.zip
-          self-hosted: false
-          jwt-issuer: ${{ secrets.FIREFOX_JWT_ISSUER }}
-          jwt-secret: ${{ secrets.FIREFOX_JWT_SECRET }}
   build-publish-firefox:
     name: build & publish firefox extension
     runs-on: ubuntu-latest
@@ -38,10 +31,10 @@ jobs:
         with:
           files: manifest.json
           dest: result.zip
-      - uses: wdzeng/firefox-addon@v1
+      - uses: trmcnvn/firefox-addon@v1
         with:
-          addon-guid: 099c6511-ce99-4245-9912-08cc23f805d9
-          xpi-path: result.zip
-          self-hosted: false
-          jwt-issuer: ${{ secrets.FIREFOX_JWT_ISSUER }}
-          jwt-secret: ${{ secrets.FIREFOX_JWT_SECRET }}
+          uuid: '{099c6511-ce99-4245-9912-08cc23f805d9}'
+          xpi: result.zip
+          manifest: manifest.json
+          api-key: ${{ secrets.FIREFOX_JWT_ISSUER }}
+          api-secret: ${{ secrets.FIREFOX_JWT_SECRET }}
