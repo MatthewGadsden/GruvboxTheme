@@ -2,27 +2,50 @@
 	"name": "Gruvbox Theme",
 	"theme": {
 		"colors": {
+			"gruvbox_bg_dark": [ 29, 32, 33 ],
+			"gruvbox_bg_standard": [ 60, 56, 55 ],
+			"gruvbox_bg_light": [ 80, 76, 75 ],
+			
+			"icons_attention": [ 234, 105, 98 ],
 			"bookmark_text": [ 251, 241, 201 ],
+			"button_icon": [ 234, 105, 98 ],
+			
 			"frame": [ 29, 32, 33 ],
 			"frame_inactive": [ 29, 32, 33 ],
 			"frame_incognito": [ 251, 241, 201 ],
 			"frame_incognito_inactive": [ 251, 241, 201 ],
+			
 			"tab_background_text": [ 251, 241, 201 ],
 			"tab_text": [ 251, 241, 201 ],
+			"tab_line": [ 125, 174, 163 ],
+			"tab_loading": [ 125, 174, 163 ],
+			"tab_selected": [ 80, 76, 75 ],
+			
 			"toolbar": [ 60, 56, 55 ],
 			"toolbar_text": [ 251, 241, 201 ],
+			"toolbar_icon": [ 125, 174, 163 ],
 			"toolbar_field": [ 29, 32, 33 ],
 			"toolbar_field_text": [ 251, 241, 201 ],
 			"toolbar_button_icon": [ 125, 174, 163 ],
-			"tab_line": [ 125, 174, 163 ],
+			"toolbar_field_border_focus": [ 234, 105, 98 ],
+			"toolbar_field_highlight": [ 234, 105, 98 ],
+			"toolbar_top_separator": [ 251, 241, 201 ],
+			
 			"popup": [ 29, 32, 33 ],
 			"popup_text": [ 251, 241, 201 ],
-			"ntp_text": [	142, 192, 124 ],
-			"button_icon": [ 234, 105, 98 ],
-			"tab_loading": [ 125, 174, 163 ],
-			"icons": [ 125, 174, 163 ]
+			"popup_border": [ 125, 174, 163 ],
+			"popup_highlight": [ 95, 174, 133 ],
+			"popup_highlight_text": [ 251, 241, 201 ],
+			
+			"ntp_text": [ 251, 241, 201 ],
+			"ntp_card_background": [ 60, 56, 55 ],
+			"ntp_background": [ 29, 32, 33 ],
+			
+			"sidebar": [ 29, 32, 33 ],
+			"sidebar_highlight": [ 95, 174, 133 ],
+			"sidebar_text": [ 251, 241, 201 ]
 		}
 	},
-	"version": "1.4",
+	"version": "1.5",
 	"manifest_version": 2
 }
